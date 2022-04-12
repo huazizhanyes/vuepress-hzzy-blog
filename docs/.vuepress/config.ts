@@ -49,7 +49,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
           { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
-          { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
         ],
       },
       {
@@ -86,7 +85,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     editLinks: false, // 启用编辑
     editLinkText: '编辑',
 
-    //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
 
     // category: false, // 是否打开分类功能，默认true
     // tag: false, // 是否打开标签功能，默认true
@@ -214,17 +212,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //       frontUrl: 'https://www.runoob.com/?s=',
     //     },
     //     {
-    //       title: '在Vue API中搜索',
     //       frontUrl: 'https://cn.vuejs.org/v2/api/#',
     //     },
     //     {
     //       title: '在Bing中搜索',
     //       frontUrl: 'https://cn.bing.com/search?q=',
     //     },
-    //     {
-    //       title: '通过百度搜索本站的',
-    //       frontUrl: 'https://www.baidu.com/s?wd=site%3Axugaoyi.com%20',
-    //     },
+    //     
     //   ],
     // },
 
