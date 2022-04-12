@@ -46,7 +46,7 @@ jobs:
           #源目录
           SOURCE: 'dist'
           # 服务器ip
-          REMOTE_HOST: ${{ secrets.HZZY_BLOG }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           # 用户
           REMOTW_USER: 'root'
           TARGET: '/www/wwwroot/blog.hzzy.xyz'
