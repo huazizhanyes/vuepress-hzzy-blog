@@ -1,47 +1,47 @@
-# This is a basic workflow to help you get started with Actions
+# # This is a basic workflow to help you get started with Actions
 
-name: 部署到阿里云服务器
+# name: 部署到阿里云服务器
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
+# # Controls when the workflow will run
+# on:
+#   # Triggers the workflow on push or pull request events but only for the main branch
+#   push:
+#     branches: [ main ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+# # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# jobs:
+#   # This workflow contains a single job called "build"
+#   build:
+#     # The type of runner that the job will run on
+#     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: 迁出代码
-        uses: actions/checkout@v3
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:
+#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#       - name: 迁出代码
+#         uses: actions/checkout@v3
       
-      # 安装nodejs
-      - name: 安装nodejs
-        uses: actions/setup-node@v1
-        with: 
-          node-version: 14.17.5
+#       # 安装nodejs
+#       - name: 安装nodejs
+#         uses: actions/setup-node@v1
+#         with: 
+#           node-version: 14.17.5
       
-      # 安装依赖
-      - name: 安装依赖
-        run: npm install
+#       # 安装依赖
+#       - name: 安装依赖
+#         run: npm install
         
-      # 打包
-      - name: 打包
-        run: npm run build
+#       # 打包
+#       - name: 打包
+#         run: npm run build
 
-      # 开始发布
-      - name: 发布阿里云
-        uses: appleboy/scp-action@master
-        with: 
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          password: ${{ secrets.REMOTE_PASS }}
-          port: 22 
-          source: "dist/"
-          target: '/www/wwwroot/blog.hzzy.xyz'
+#       # 开始发布
+#       - name: 发布阿里云
+#         uses: appleboy/scp-action@master
+#         with: 
+#           host: ${{ secrets.REMOTE_HOST }}
+#           username: ${{ secrets.REMOTE_USER }}
+#           password: ${{ secrets.REMOTE_PASS }}
+#           port: 22 
+#           source: "dist/"
+#           target: '/www/wwwroot/blog.hzzy.xyz'
