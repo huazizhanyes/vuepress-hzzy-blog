@@ -37,16 +37,11 @@ jobs:
 
       # 开始发布
       - name: 发布阿里云
-        uses: easingthemes/ssh-deploy@v2.1.1
-        env: 
-          # 私钥
-          SSH-PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          # scp参数
-          ARGS: '-avzr --delete'
-          #源目录
-          SOURCE: 'dist'
-          # 服务器ip
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          # 用户
-          REMOTW_USER: 'root'
-          TARGET: '/www/wwwroot/blog.hzzy.xyz'
+        uses: appleboy/scp-action@master
+        with: 
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{ secrets.REMOTE_PASS }}
+          port: 22 
+          source: "dist/"
+          target: '/www/wwwroot/blog.hzzy.xyz'
