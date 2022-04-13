@@ -35,7 +35,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
               { text: 'CSS', link: '/pages/c8f128/' },
               { text: 'JavaScript文章', link: '/pages/a61298/' },
-              { text: 'JavaScript教程', link: '/pages/javascript/' },
+              { text: 'JavaScript教程', link: '/pages/0796ba76b4b55368/' },
               { text: 'Vue', link: '/pages/114158caa9e96df0/' },
               { text: 'ES6教程', link: '/pages/f344d070a1031ef7/' },
               { text: 'Git',link: '/pages/8292d8/'}
