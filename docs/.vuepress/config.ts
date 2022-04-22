@@ -173,7 +173,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ],
     ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
-    ['script', { type: 'text/javascript', src: '/assets/js/push.js' }],
+    ['script', { type: 'text/javascript', src: '/assets/push.js' }],
     // [
     //   'script',
     //   {
